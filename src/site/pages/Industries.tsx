@@ -270,29 +270,55 @@ const Industries = () => {
             </div>
           </div>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-            {visible.map((s) => (
-              <div
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {visible.map((s, i) => (
+              <motion.article
                 key={s.code}
-                className="group flex flex-col bg-card p-6 transition-colors hover:bg-accent/40"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: (i % 3) * 0.08 }}
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
               >
                 <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                   <span>{s.code}</span>
-                  <span>{s.group}</span>
+                  <span className="text-primary">MODULE: {s.group}</span>
                 </div>
-                <h3 className="mt-3 text-base font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
-                <div className="mt-4 flex flex-wrap gap-1.5">
+
+                <h3 className="mt-4 text-foreground">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.summary}</p>
+
+                <div className="mt-6 flex-1 rounded-xl border border-border/70 bg-background/60 p-4">
+                  <div className="mb-3 flex items-center justify-between text-[11px] font-medium uppercase tracking-widest text-muted-foreground">
+                    <span>Specialty workflow</span>
+                    <span className="text-primary">Included</span>
+                  </div>
+                  <div className="space-y-2">
+                    {s.pills.map((p, index) => (
+                      <div
+                        key={p}
+                        className="flex items-center gap-3 rounded-lg border border-border/60 bg-card px-3 py-2"
+                      >
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-[10px] font-semibold tabular-nums text-primary">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <span className="text-xs font-medium text-foreground">{p}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-5 flex flex-wrap gap-2">
                   {s.pills.map((p) => (
                     <span
                       key={p}
-                      className="rounded-md bg-muted px-2 py-1 text-[11px] text-muted-foreground"
+                      className="rounded-full border border-border/70 px-3 py-1 text-xs text-muted-foreground"
                     >
                       {p}
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.article>
             ))}
           </div>
         </div>
