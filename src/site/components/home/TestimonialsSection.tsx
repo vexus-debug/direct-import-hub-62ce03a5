@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.12 }}
-              className="group relative rounded-2xl border border-border/50 bg-card/60 p-7 backdrop-blur-sm transition-all duration-300 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5"
+              className="group relative rounded-2xl border border-border/50 bg-card/60 p-7 backdrop-blur-sm transition-colors duration-300 hover:border-primary/20"
             >
               <Quote className="mb-4 h-8 w-8 text-primary/20" />
               

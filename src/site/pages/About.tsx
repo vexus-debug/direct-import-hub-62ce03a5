@@ -83,7 +83,7 @@ const About = () => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-              <div className="rounded-2xl border border-border/60 bg-card p-8 shadow-sm">
+              <div className="rounded-2xl border border-border/60 bg-card p-8">
                 <h3 className="mb-6 text-lg font-bold text-foreground">Why Clinics Choose Clinexus</h3>
                 <ul className="space-y-3">
                   {whyUs.map((item) => (
@@ -146,7 +146,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="relative overflow-hidden rounded-2xl border border-border/50 bg-card p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5"
+                className="relative overflow-hidden rounded-2xl border border-border/50 bg-card p-8 transition-transform hover:-translate-y-1"
               >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
                   <p.icon className="h-6 w-6 text-primary" />
@@ -196,7 +196,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-12 text-center shadow-lg"
+            className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-12 text-center"
           >
             <span className="mb-3 inline-block text-sm font-semibold uppercase tracking-widest text-primary">Get Started</span>
             <h2 className="mb-4 text-3xl font-extrabold text-foreground">Ready for Fewer Headaches and More Revenue?</h2>

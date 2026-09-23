@@ -15,7 +15,7 @@ const CollaborateSection = () => {
             transition={{ duration: 0.6 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-xl shadow-black/20">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
               <div className="mb-5 flex items-center gap-4">
                 <div className="h-16 w-16 rounded-full bg-muted/20 ring-4 ring-white/10" />
                 <div>
@@ -47,7 +47,7 @@ const CollaborateSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="absolute -right-3 -top-3 rounded-xl border border-white/10 bg-[hsl(var(--medical-blue-dark))] px-4 py-3 shadow-lg"
+              className="absolute -right-3 -top-3 rounded-xl border border-white/10 bg-[hsl(var(--medical-blue-dark))] px-4 py-3"
             >
               <div className="flex items-center gap-2">
                 <Activity className="h-4 w-4 text-[hsl(var(--medical-teal))]" />
@@ -63,7 +63,7 @@ const CollaborateSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -bottom-3 -left-3 rounded-xl border border-white/10 bg-[hsl(var(--medical-blue-dark))] px-4 py-3 shadow-lg"
+              className="absolute -bottom-3 -left-3 rounded-xl border border-white/10 bg-[hsl(var(--medical-blue-dark))] px-4 py-3"
             >
               <div className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-[hsl(var(--medical-teal))]" />

@@ -478,7 +478,7 @@ export default function PublicClinicSite() {
           {heroStats.length > 0 && (
             <FadeInSection className="mt-8 grid grid-cols-2 gap-3">
               {heroStats.map((st) => (
-                <div key={st.label} className="p-5 text-center shadow-sm" style={cardStyle}>
+                <div key={st.label} className="p-5 text-center" style={cardStyle}>
                   <p className="text-2xl font-bold" style={{ color: primaryColor, fontFamily: tpl.headingFont }}>{st.value}</p>
                   <p className="text-[11px] mt-1" style={mutedStyle}>{st.label}</p>
                 </div>
@@ -497,7 +497,7 @@ export default function PublicClinicSite() {
 
           {whyItems.length > 0 && (
             <FadeInSection className="mt-6">
-              <div className="p-6 shadow-sm" style={cardStyle}>
+              <div className="p-6" style={cardStyle}>
                 <h3 className="font-bold mb-4" style={headingStyle}>{s.why_title || copy.whyTitle}</h3>
                 <ul className="space-y-3">
                   {whyItems.map((w, i) => (
@@ -519,7 +519,7 @@ export default function PublicClinicSite() {
           {serviceCards.length > 0 && (
             <FadeInSection className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {serviceCards.map((sc, i) => (
-                <div key={`${sc.title}-${i}`} className="p-5 shadow-sm h-full" style={cardStyle}>
+                <div key={`${sc.title}-${i}`} className="p-5 h-full" style={cardStyle}>
                   <div className="h-9 w-9 flex items-center justify-center mb-3" style={{ backgroundColor: hexToRgba(primaryColor, 0.1), borderRadius: radius }}>
                     <Stethoscope className="h-4.5 w-4.5" style={{ color: primaryColor }} />
                   </div>
@@ -709,7 +709,7 @@ export default function PublicClinicSite() {
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 text-left">
               {reviews.map((r, i) => (
                 <FadeInSection key={r.id} delay={i * 0.05}>
-                  <div className="p-5 h-full shadow-sm" style={cardStyle}>
+                  <div className="p-5 h-full" style={cardStyle}>
                     <div className="flex gap-0.5 mb-2">
                       {Array.from({ length: 5 }).map((_, k) => (
                         <Star key={k} className="h-3.5 w-3.5" style={{ fill: k < r.rating ? primaryColor : "transparent", color: k < r.rating ? primaryColor : c.border }} />
@@ -727,7 +727,7 @@ export default function PublicClinicSite() {
               ))}
               {testimonials.map((t, i) => (
                 <FadeInSection key={`t-${i}`} delay={i * 0.05}>
-                  <div className="p-5 h-full shadow-sm" style={cardStyle}>
+                  <div className="p-5 h-full" style={cardStyle}>
                     <div className="flex gap-0.5 mb-2">
                       {Array.from({ length: t.rating || 5 }).map((_, k) => (
                         <Star key={k} className="h-3.5 w-3.5" style={{ fill: primaryColor, color: primaryColor }} />
@@ -764,7 +764,7 @@ export default function PublicClinicSite() {
 
           <div className="mt-8 grid lg:grid-cols-2 gap-6">
             <div className="space-y-3">
-              <div className="overflow-hidden shadow-sm" style={cardStyle}>
+              <div className="overflow-hidden" style={cardStyle}>
                 {s.map_embed_url ? (
                   <iframe src={s.map_embed_url} title="Clinic location map" className="w-full" style={{ height: 260, border: 0 }} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
                 ) : (
@@ -787,7 +787,7 @@ export default function PublicClinicSite() {
 
             <div className="space-y-3">
               {hours.length > 0 && (
-                <div className="overflow-hidden shadow-sm" style={cardStyle}>
+                <div className="overflow-hidden" style={cardStyle}>
                   <div className="px-5 py-4 flex items-center gap-2" style={{ borderBottom: `1px solid ${c.border}` }}>
                     <Clock className="h-4 w-4" style={{ color: primaryColor }} />
                     <p className="text-sm font-semibold" style={{ color: c.text }}>Opening hours</p>
@@ -811,7 +811,7 @@ export default function PublicClinicSite() {
                 </div>
               )}
 
-              <div className="p-5 space-y-4 shadow-sm" style={cardStyle}>
+              <div className="p-5 space-y-4" style={cardStyle}>
                 {clinic?.address && (
                   <div className="flex items-start gap-3">
                     <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: primaryColor }} />
@@ -864,7 +864,7 @@ export default function PublicClinicSite() {
           {faqs.length > 0 && (
             <div className="mt-10 max-w-3xl mx-auto space-y-3">
               {faqs.map((f, i) => (
-                <details key={`${f.question}-${i}`} className="p-5 shadow-sm" style={cardStyle}>
+                <details key={`${f.question}-${i}`} className="p-5" style={cardStyle}>
                   <summary className="cursor-pointer font-medium text-sm list-none flex items-center justify-between gap-4" style={{ color: c.text }}>
                     {f.question}
                     <ChevronDown className="h-4 w-4 shrink-0" style={{ color: primaryColor }} />

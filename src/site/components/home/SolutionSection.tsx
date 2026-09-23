@@ -79,7 +79,7 @@ const SolutionSection = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: reduceMotion ? 0 : i * 0.14 }}
                 whileHover={reduceMotion ? undefined : { y: -6 }}
-                className={`group w-full overflow-hidden rounded-2xl border border-border/50 bg-card/60 shadow-lg backdrop-blur-sm lg:max-w-md ${i === 1 ? "lg:-translate-x-10" : ""}`}
+                className={`group w-full overflow-hidden rounded-2xl border border-border/50 bg-card/60 backdrop-blur-sm lg:max-w-md ${i === 1 ? "lg:-translate-x-10" : ""}`}
               >
                 <div className="relative aspect-[16/7] overflow-hidden border-b border-border/50 bg-muted/50">
                   <motion.img

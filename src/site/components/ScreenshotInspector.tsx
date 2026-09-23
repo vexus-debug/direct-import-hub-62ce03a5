@@ -23,7 +23,7 @@ export default function ScreenshotInspector({ src, alt }: ScreenshotInspectorPro
   }, [fullscreen]);
 
   const controls = (
-    <div className="flex items-center gap-1 rounded-md border border-border/70 bg-card p-1 shadow-sm">
+    <div className="flex items-center gap-1 rounded-md border border-border/70 bg-card p-1">
       <Button
         type="button"
         variant="ghost"
@@ -76,7 +76,7 @@ export default function ScreenshotInspector({ src, alt }: ScreenshotInspectorPro
 
   return (
     <>
-      <figure className="overflow-hidden rounded-md border border-border/70 bg-muted/20 shadow-sm">
+      <figure className="overflow-hidden rounded-md border border-border/70 bg-muted/20">
         <div className="flex items-center justify-between gap-3 border-b border-border/70 bg-card px-3 py-2">
           <figcaption className="text-xs font-medium text-muted-foreground">Dashboard screenshot</figcaption>
           {controls}
@@ -94,7 +94,7 @@ export default function ScreenshotInspector({ src, alt }: ScreenshotInspectorPro
 
       {fullscreen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-foreground/80 p-4 sm:p-8">
-          <div className="flex max-h-full w-full max-w-6xl flex-col overflow-hidden rounded-md border border-border/70 bg-background shadow-2xl">
+          <div className="flex max-h-full w-full max-w-6xl flex-col overflow-hidden rounded-md border border-border/70 bg-background">
             <div className="flex items-center justify-between gap-3 border-b border-border/70 px-3 py-2 sm:px-5">
               <p className="text-sm font-medium text-foreground">{alt}</p>
               <div className="flex items-center gap-2">
