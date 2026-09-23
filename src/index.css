@@ -475,7 +475,7 @@
 .site-theme [class*="bg-card"] {
   border-color: hsl(var(--primary) / 0.2);
   background-color: hsl(var(--card) / 0.72);
-  box-shadow: 0 20px 45px -28px hsl(var(--primary) / 0.42);
+  box-shadow: none;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
@@ -491,7 +491,7 @@
 .site-theme .site-glass {
   border: 1px solid hsl(var(--primary) / 0.2);
   background-color: hsl(var(--card) / 0.64);
-  box-shadow: 0 20px 45px -28px hsl(var(--primary) / 0.42);
+  box-shadow: none;
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
 }
@@ -602,7 +602,7 @@
 .site-theme .site-section-light .site-glass {
   border-color: hsl(var(--primary) / 0.14);
   background-color: hsl(0 0% 100% / 0.86);
-  box-shadow: 0 22px 45px -30px hsl(197 43% 8% / 0.45);
+  box-shadow: none;
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
@@ -620,8 +620,7 @@
 
 /* ── Public site typography & surfaces ──
    Clean sans-serif headings for a clinical, trustworthy SaaS feel,
-   tight sans body, hairline borders, soft shadows. Scoped to the
-   public marketing site only. */
+   tight sans body and hairline borders. Scoped to the public site. */
 .site-theme h1,
 .site-theme h2,
 .site-theme h3 {
@@ -650,12 +649,17 @@
 
 .site-theme .site-hairline {
   border: 1px solid hsl(var(--border));
-  box-shadow: 0 1px 2px hsl(215 28% 12% / 0.04), 0 18px 40px -32px hsl(215 28% 12% / 0.5);
+  box-shadow: none;
 }
 
 .site-theme .site-hairline-invert {
   border: 1px solid hsl(0 0% 100% / 0.12);
-  box-shadow: 0 20px 50px -35px hsl(0 0% 0% / 0.8);
+  box-shadow: none;
+}
+
+/* Public surfaces stay crisp and border-led rather than glow-led. */
+.site-theme :where(.shadow, .shadow-sm, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl) {
+  box-shadow: none;
 }
 
 .site-theme .site-rule {

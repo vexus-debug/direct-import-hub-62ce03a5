@@ -19,7 +19,7 @@ export default function CookieConsent() {
   if (!visible) return null;
 
   return (
-    <aside className="fixed inset-x-3 bottom-3 z-[90] rounded-md border border-border bg-card p-4 shadow-xl sm:inset-x-auto sm:left-6 sm:max-w-xl">
+    <aside className="fixed inset-x-3 bottom-3 z-[90] rounded-md border border-border bg-card p-4 sm:inset-x-auto sm:left-6 sm:max-w-xl">
       <p className="text-sm font-semibold text-foreground">Your cookie choices</p>
       <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
         Clinexus uses essential cookies to keep the site working. Optional analytics cookies help us improve the experience.

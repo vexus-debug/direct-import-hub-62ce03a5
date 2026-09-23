@@ -26,7 +26,7 @@ const Screenshot = ({
   className?: string;
 }) => (
   <figure className={className}>
-    <div className="overflow-hidden rounded-2xl border border-primary/15 bg-background shadow-2xl shadow-primary/10">
+    <div className="overflow-hidden rounded-2xl border border-primary/15 bg-background">
       <div className="flex items-center gap-1.5 border-b border-primary/10 bg-muted/40 px-4 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-primary/25" />
         <span className="h-2.5 w-2.5 rounded-full bg-primary/25" />
@@ -374,7 +374,7 @@ const EyeClinics = () => {
                   whileHover={{ y: -6 }}
                   className={
                     p.featured
-                      ? "eye-panel-accent rounded-2xl p-6 shadow-xl md:scale-105"
+                      ? "eye-panel-accent rounded-2xl p-6 md:scale-105"
                       : "rounded-2xl bg-background/50 p-6"
                   }
                 >

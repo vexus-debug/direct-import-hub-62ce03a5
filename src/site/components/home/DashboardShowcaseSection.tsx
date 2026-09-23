@@ -59,7 +59,7 @@ const DashboardShowcaseSection = () => {
               className="flex-none snap-center"
             >
               <div className="w-[220px] md:w-[260px]">
-                <div className="rounded-[2rem] border-[5px] border-foreground/10 bg-foreground/5 p-1.5 shadow-xl shadow-primary/5">
+                <div className="rounded-[2rem] border-[5px] border-foreground/10 bg-foreground/5 p-1.5">
                   <div className="overflow-hidden rounded-[1.5rem]">
                     <img src={item.src} alt={item.label} className="w-full" loading="lazy" />
                   </div>

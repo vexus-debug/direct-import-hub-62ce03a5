@@ -49,7 +49,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-5 rounded-2xl border border-border/50 bg-card/80 p-8 shadow-lg backdrop-blur-sm"
+              className="space-y-5 rounded-2xl border border-border/50 bg-card/80 p-8 backdrop-blur-sm"
             >
               <h3 className="text-xl font-bold text-foreground">Send Us a Message</h3>
               <div className="space-y-2">
